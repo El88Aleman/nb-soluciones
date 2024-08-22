@@ -1,0 +1,67 @@
+.form {
+  margin: 40px auto; /* Centra horizontalmente el formulario */
+  width: 70%; /* Ocupa el 70% del ancho de la página */
+  height: auto; /* Ajusta la altura automáticamente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.labelTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Alinea el contenido del form a la izquierda */
+  font-family: "MontserratTitle";
+  color: #333;
+  width: 100%;
+  margin: 10px;
+}
+
+.labelText {
+  font-family: "MontserratText";
+  color: #333;
+  width: 100%;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "MontserratText";
+  color: white !important;
+  text-align: center;
+  width: 20%;
+  margin: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.button:hover {
+  background-color: #333 !important;
+  border-color: #333 !important;
+  transform: scale(1.1);
+}
+.iconos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  list-style-type: none;
+  margin: 20px;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.1);
+}
+@font-face {
+  font-family: "MontserratTitle";
+  src: url(../../assets/tipografias/MontserratTitle.ttf);
+}
+@font-face {
+  font-family: "MontserratText";
+  src: url(../../assets/tipografias/MontserratText.ttf);
+}

@@ -1,0 +1,30 @@
+.navBar {
+  display: flex;
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; /* Alinea los items del menú hacia la derecha */
+  align-items: center; /* Centra verticalmente los items del menú */
+  list-style-type: none;
+  width: 100%;
+  margin-right: 30px;
+}
+.itemMenu {
+  color: #333; /* Color del texto */
+  text-decoration: none; /* Quita el subrayado por defecto */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 1.2rem; /* Tamaño de la fuente */
+  transition: font-size 0.3s ease;
+  font-family: "MontserratTitle";
+}
+.itemMenu:hover {
+  font-size: 1.4rem;
+}
+
+@font-face {
+  font-family: "MontserratTitle";
+  src: url(../../../assets/tipografias/MontserratTitle.ttf);
+}

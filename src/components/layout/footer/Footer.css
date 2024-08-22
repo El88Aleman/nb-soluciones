@@ -1,0 +1,52 @@
+.footer {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: rgb(235, 235, 235);
+  margin-top: 10px;
+}
+.contacto {
+  color: #333; /* Color del texto */
+  text-decoration: none; /* Quita el subrayado por defecto */
+  margin: 10px;
+  font-size: 1.2rem; /* Tamaño de la fuente */
+  transition: font-size 0.3s ease;
+  font-family: "MontserratTitle";
+}
+.contacto:hover {
+  font-size: 1.4rem;
+}
+.contacto .icono {
+  margin-right: 10px;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+}
+.titulo {
+  text-align: center; /* Añade esta línea */
+  font-family: "MontserratTitle";
+  margin: 10px;
+  color: #333;
+}
+.flecha {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: #333;
+  margin-right: 20px;
+  transition: all 0.3s;
+}
+.flecha:hover {
+  transform: scale(1.25);
+}
+@font-face {
+  font-family: "MontserratTitle";
+  src: url(../../../assets/tipografias/MontserratTitle.ttf);
+}

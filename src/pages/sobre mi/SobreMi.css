@@ -1,0 +1,22 @@
+.sobreMi {
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  text-align: center;
+  margin: 10px;
+  font-family: "MontserratTitle";
+}
+.text {
+  margin: 10px;
+  font-family: "MontserratText";
+}
+
+@font-face {
+  font-family: "MontserratText";
+  src: url(../../assets/tipografias/MontserratText.ttf);
+}
+@font-face {
+  font-family: "MontserratTitle";
+  src: url(../../assets/tipografias/MontserratTitle.ttf);
+}
