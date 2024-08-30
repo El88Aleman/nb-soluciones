@@ -41,21 +41,69 @@
 }
 .iconos {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   list-style-type: none;
   margin: 20px;
+  width: 100%;
 }
 .icon {
-  display: flex;
-  align-items: center;
   text-decoration: none;
-  color: #333;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 .icon:hover {
   transform: scale(1.1);
+}
+.phone {
+  padding: 10px;
+  background-color: #00ff00;
+  color: white;
+  border-radius: 15px;
+}
+.whatsapp {
+  padding: 5px;
+  background: linear-gradient(
+    45deg,
+    #006400,
+    /* DarkGreen */ #228b22,
+    /* ForestGreen */ #32cd32,
+    /* LimeGreen */ #00ff00,
+    /* Green */ #7fff00,
+    /* Chartreuse */ #adff2f /* GreenYellow */
+  );
+  color: #ffffff;
+  border-radius: 15px;
+}
+.ig {
+  padding: 5px;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  color: #ffffff;
+  border-radius: 15px;
+}
+.linkedin {
+  padding: 8px;
+  background-color: #0077b5; /* Color de fondo de LinkedIn */
+  color: white;
+  border-radius: 15px;
+}
+.mensajeAprobado {
+  font-family: "MontserratText";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 60px;
+  height: 50vh;
+  width: 100%;
 }
 @font-face {
   font-family: "MontserratTitle";

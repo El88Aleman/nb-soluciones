@@ -1,17 +1,29 @@
-import { Image } from "react-bootstrap";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
     <div className="navBar">
       <Link to="/">
-        <Image
+        <motion.img
           src="../../src/assets/fotos/nbSoluciones.png"
-          height="200px"
+          heigth="200px"
           width="200px"
-          style={{ margin: "20px" }}
+          className="image"
+          whileInView={{
+            scale: [0.5, 1, 0.5, 0.5, 1, 1],
+            rotate: [0, 0, 180, 180, 180, 0],
+            borderRadius: ["50%", "0%", "50%", "0%", "50%"],
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.2, 0.5, 0.8, 1],
+            repeatDelay: 1,
+          }}
         />
+        <div className="text"></div>
       </Link>
       <ul className="menu">
         <Link to="/" className="itemMenu">

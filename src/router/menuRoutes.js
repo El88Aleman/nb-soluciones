@@ -1,7 +1,7 @@
 import Contactos from "../pages/contactos/Contactos";
 import HigieneYSeguridad from "../pages/higiene y seguridad/HigieneYSeguridad";
 import Ingenieria from "../pages/ingenieria/Ingenieria";
-import ProyectosRealizados from "../pages/proyectos realizados/ProyectosRealizados";
+import ProyectosRealizados from "../pages/proyectos realizados/ProyectosRealizados.jsx";
 import SobreMi from "../pages/sobre mi/SobreMi";
 
 export const routes = [

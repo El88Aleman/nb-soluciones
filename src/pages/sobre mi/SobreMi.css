@@ -1,6 +1,7 @@
 .sobreMi {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .title {
   text-align: center;
@@ -10,8 +11,8 @@
 .text {
   margin: 10px;
   font-family: "MontserratText";
+  font-size: 24px;
 }
-
 @font-face {
   font-family: "MontserratText";
   src: url(../../assets/tipografias/MontserratText.ttf);

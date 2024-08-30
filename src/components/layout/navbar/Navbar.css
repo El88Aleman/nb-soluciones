@@ -23,6 +23,9 @@
 .itemMenu:hover {
   font-size: 1.4rem;
 }
+.image {
+  margin: 20px;
+}
 
 @font-face {
   font-family: "MontserratTitle";

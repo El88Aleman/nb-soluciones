@@ -1,51 +1,37 @@
 import { servicios } from "./servicios.js";
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import "../../../components/global/global.css";
+import UseIntersecting from "../../../components/useIntersecting/UseIntersecting.jsx";
 const Servicios = () => {
-  const [selectedId, setSelectedId] = useState(null);
-
-  const selectedItem = servicios.find((servicio) => servicio.id === selectedId);
+  const [elementoRef2, isIntersecting2] = UseIntersecting({
+    threshold: 0.5,
+  });
   return (
     <div>
-      <h1 className="titleService">¿Porque elegir mis servicios?</h1>
-      <div className="listServices">
-        {servicios.map((servicio) => (
+      <div ref={elementoRef2}>
+        {isIntersecting2 && (
+          <motion.h1
+            className="titleService"
+            initial={{ x: "-200vh" }}
+            animate={{ x: 0 }}
+            transition={{ delay: 0.5, type: "spring", stiffness: 150 }}
+          >
+            ¿Porque elegir mis servicios?
+          </motion.h1>
+        )}
+      </div>
+      {servicios.map((servicio) => (
+        <div key={servicio.id} className="listServices">
           <motion.div
             key={servicio.id}
             layoutId={servicio.id}
-            onClick={() => setSelectedId(servicio.id)}
             className="service-item"
-            style={{ cursor: "pointer", marginBottom: "10px" }}
           >
-            <motion.h2 style={{ fontFamily: "MontserratTitle" }}>
-              {servicio.title}
-            </motion.h2>
-            <motion.h5 style={{ fontFamily: "MontserratText" }}>
-              {servicio.subtitle}
-            </motion.h5>
+            <motion.h2>{servicio.title}</motion.h2>
+            <motion.h5>{servicio.subtitle}</motion.h5>
           </motion.div>
-        ))}
-
-        <AnimatePresence>
-          {selectedId && selectedItem && (
-            <motion.div layoutId={selectedId} className="service-details">
-              <motion.h2 style={{ fontFamily: "MontserratTitle" }}>
-                {selectedItem.title}
-              </motion.h2>
-              <motion.h5 style={{ fontFamily: "MontserratText" }}>
-                {selectedItem.subtitle}
-              </motion.h5>
-              <motion.button
-                onClick={() => setSelectedId(null)}
-                className="close-button"
-              >
-                Cerrar
-              </motion.button>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
