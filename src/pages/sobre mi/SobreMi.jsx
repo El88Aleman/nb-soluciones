@@ -1,15 +1,18 @@
 import "./SobreMi.css";
 import Servicios from "./servicios/Servicios.jsx";
 import HistorialDeConfianza from "./historial de confianza/HistorialDeConfianza.jsx";
-import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import UseIntersecting from "../../components/useIntersecting/UseIntersecting.jsx";
 import { Col, Image } from "react-bootstrap";
+//import curriculum from "./cv/CVFrancoBertone.pdf";//
 
 const SobreMi = () => {
   const [elementoRef, isIntersecting] = UseIntersecting({
     threshold: 0.5,
   });
+  const handleClickCv = () => {
+    window.open(curriculum, "_blank");
+  };
 
   return (
     <div className="sobreMi">
@@ -27,6 +30,13 @@ const SobreMi = () => {
           roundedCircle
         />
       </Col>
+      <div>
+        <a className="cv" onClick={handleClickCv}>
+          <span id="span1"></span>
+          <span id="span2"></span>
+          DOWNLOAD CV
+        </a>
+      </div>
       <div className="text">
         <Typewriter
           words={[
@@ -40,17 +50,8 @@ const SobreMi = () => {
           delaySpeed={3000}
         />
       </div>
-      <div ref={elementoRef}>
-        {isIntersecting && (
-          <motion.h1
-            className="title"
-            initial={{ x: "-200vh" }}
-            animate={{ x: 0 }}
-            transition={{ delay: 0.5, type: "spring", stiffness: 150 }}
-          >
-            Objetivos
-          </motion.h1>
-        )}
+      <div className="contenedorTitle" ref={elementoRef}>
+        {isIntersecting && <p className="title">Objetivos</p>}
       </div>
       <div className="text">
         <Typewriter

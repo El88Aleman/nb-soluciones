@@ -3,7 +3,7 @@ import { FaArrowUp } from "react-icons/fa";
 import { FaAddressBook } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "./Footer.css";
-import { Image } from "react-bootstrap";
+import LogoFyB from "../../../assets/fotos/LogoFyB";
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -34,16 +34,11 @@ const Footer = () => {
             repeatDelay: 1,
           }}
         />
-        <h5 className="titulo">
+        <p className="titulo">
           <strong>Soluciones</strong> en Ingenieria e Higiene y Seguridad{" "}
-        </h5>
-        <div>
-          <Image
-            height="150px"
-            width="350px"
-            src="https://res.cloudinary.com/dfcnmxndf/image/upload/v1724884848/tcmuzrlmbwzwsii8m0ck.svg"
-            alt="Logo"
-          />
+        </p>
+        <div className="logoMio">
+          <LogoFyB />
         </div>
       </div>
       <Link className="flecha" onClick={scrollToTop}>

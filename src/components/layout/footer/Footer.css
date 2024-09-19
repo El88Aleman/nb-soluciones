@@ -33,6 +33,7 @@
   font-family: "MontserratTitle";
   margin: 10px;
   color: #333;
+  font-size: 24px;
 }
 .flecha {
   display: flex;
@@ -45,6 +46,9 @@
 }
 .flecha:hover {
   transform: scale(1.25);
+}
+.logoMio {
+  margin-left: 150px;
 }
 @font-face {
   font-family: "MontserratTitle";

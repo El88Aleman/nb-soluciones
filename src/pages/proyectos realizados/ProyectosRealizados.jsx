@@ -1,7 +1,6 @@
 import { Image } from "react-bootstrap";
 import "./ProyectosRealizados.css";
 import { proyectos } from "./proyectosRealizados.js";
-import { motion } from "framer-motion";
 import UseIntersecting from "../../components/useIntersecting/UseIntersecting";
 import "./ProyectosRealizados.css";
 const ProyectosRealizados = () => {
@@ -10,29 +9,24 @@ const ProyectosRealizados = () => {
   });
   return (
     <div className="proyectosRealizados">
-      <div ref={elementoRef7}>
-        {isIntersecting7 && (
-          <motion.h1
-            className="title"
-            initial={{ x: "-200vh" }}
-            animate={{ x: 0 }}
-            transition={{ delay: 0.5, type: "spring", stiffness: 150 }}
-          >
-            Proyectos Realizados
-          </motion.h1>
-        )}
+      <div
+        style={{ marginBottom: "100px", marginTop: "30px" }}
+        ref={elementoRef7}
+      >
+        {isIntersecting7 && <p className="title">Proyectos Realizados</p>}
       </div>
       {proyectos.map((proyecto) => (
-        <div key={proyecto.id} className="caja">
-          <Image
-            src={proyecto.src}
-            height={proyecto.height}
-            width={proyecto.width}
-            className="img"
-          />
-          <h3 style={{ fontFamily: "MontserratText", margin: "5px" }}>
-            {proyecto.texto}
-          </h3>
+        <div key={proyecto.id} className="containerProyect">
+          <div className="containerImage" style={{ "--quantity": 12 }}>
+            <Image
+              src={proyecto.src}
+              height={proyecto.height}
+              width={proyecto.width}
+              style={{ "--position": proyecto.position }}
+              className="imgProyect"
+            />
+          </div>
+          <p className="containerText">{proyecto.texto}</p>
         </div>
       ))}
     </div>

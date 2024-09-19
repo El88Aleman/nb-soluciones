@@ -3,8 +3,7 @@ import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import "./Contactos.css";
-import { Link, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import UseIntersecting from "../../components/useIntersecting/UseIntersecting";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
@@ -41,31 +40,12 @@ const Contactos = () => {
         }
       );
   };
-  const handlePhoneClick = (event) => {
-    event.preventDefault();
-    window.open("tel:+3425456890", "_blank");
-  };
-  const handleWhatsAppClick = (event) => {
-    event.preventDefault();
-    window.open("https://wa.me/3425456890", "_blank");
-  };
-  const handleInstagramClick = (event) => {
-    event.preventDefault();
-    window.open("https://www.instagram.com/ing.nicolasberesvil", "_blank");
-  };
-  const handleLinkedInClick = (event) => {
-    event.preventDefault();
-    window.open(
-      "https://www.linkedin.com/in/nicol%C3%A1s-beresvil-682a89b0/",
-      "_blank"
-    );
-  };
   return (
     <div>
       {messageSent ? (
-        <h2 className="mensajeAprobado">
+        <p className="mensajeAprobado">
           Mensaje enviado con éxito &#127881; &#127881; &#127881;
-        </h2>
+        </p>
       ) : (
         <>
           <Form className="form" ref={form} onSubmit={sendEmail}>
@@ -117,30 +97,36 @@ const Contactos = () => {
               Enviar
             </Button>
           </Form>
-          <motion.div
-            className="iconos"
-            ref={elementoRef6}
-            initial={{ x: "-200vh" }}
-            animate={{ x: 0 }}
-            transition={{ delay: 0.5, type: "spring", stiffness: 150 }}
-          >
+          <div className="iconos" ref={elementoRef6}>
             {isIntersecting6 && (
               <div className="iconos">
-                <Link to="#" onClick={handlePhoneClick} className="icon">
+                <a href="tel:+3425456890" target="_blank" className="icon">
                   <FaPhoneAlt className="phone" size={60} />
-                </Link>
-                <Link to="#" onClick={handleWhatsAppClick} className="icon">
+                </a>
+                <a
+                  href="https://wa.me/3425456890"
+                  target="_blank"
+                  className="icon"
+                >
                   <FaWhatsapp className="whatsapp" size={60} />
-                </Link>
-                <Link to="#" onClick={handleInstagramClick} className="icon">
+                </a>
+                <a
+                  href="https://www.instagram.com/ing.nicolasberesvil"
+                  target="_blank"
+                  className="icon"
+                >
                   <FaInstagram className="ig" size={60} />
-                </Link>
-                <Link to="#" onClick={handleLinkedInClick} className="icon">
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/nicol%C3%A1s-beresvil-682a89b0/"
+                  target="_blank"
+                  className="icon"
+                >
                   <FaLinkedin className="linkedin" size={60} />
-                </Link>
+                </a>
               </div>
             )}
-          </motion.div>
+          </div>
         </>
       )}
     </div>

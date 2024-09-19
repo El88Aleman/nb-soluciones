@@ -1,35 +1,55 @@
-.titleService {
+.contenedorTitle {
+  margin: 100px;
+}
+.title {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px;
   font-family: "MontserratTitle";
+  animation: slideIn 1s ease forwards;
+  font-size: 40px;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-200vh); /* Salir de la pantalla */
+    opacity: 0; /* Comenzar invisible */
+  }
+  50% {
+    transform: translateX(50vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0); /* Posición final */
+    opacity: 1; /* Hacer visible */
+  }
 }
 
 .listServices {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  text-align: center;
-  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .service-item {
-  width: 60%; /* Limita el ancho máximo */
-  min-height: 150px; /* Altura fija para todas las tarjetas */
+  width: 600px;
+  min-height: 150px;
   padding: 20px;
   margin: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #f2f2f2;
+  background-color: #f0f0f0;
+  border-style: inset;
+  border-width: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
   transition: transform 0.7s ease, background-color 0.7s ease, color 0.7s ease;
   font-family: "MontserratTitle";
-  text-align: center;
 }
 .service-item:hover {
   background-color: #333;
   color: white;
+  transform: rotateY(15deg);
 }
 
 @font-face {
