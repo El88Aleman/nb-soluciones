@@ -1,0 +1,41 @@
+.containerLoader {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  position: relative;
+  overflow: hidden; /* Para ocultar el logo cuando se desplace */
+  width: 340px; /* Ajusta al tamaño de tu logo */
+  height: 220px; /* Ajusta al tamaño de tu logo */
+}
+
+.loaderImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0; /* Comienza invisible */
+  transform: translateX(100%); /* Comienza desplazado */
+  animation: load 2s forwards; /* Duración de la animación */
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 0.5; /* Cambio de opacidad durante la animación */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Regresa a su posición original */
+  }
+}

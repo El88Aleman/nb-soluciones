@@ -1,56 +1,122 @@
 .footer {
   width: 100%;
-  height: 200px;
+  height: auto;
   display: flex;
-  justify-content: space-between; /* Espacio entre los elementos */
-  align-items: center; /* Centra verticalmente los elementos */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: rgb(235, 235, 235);
   margin-top: 20px;
+  overflow: hidden;
+}
+.containerContacto {
+  display: flex;
+  margin: 20px;
+  transition: transform 0.3s ease;
+  font-family: "MontserratTitle";
+  text-decoration: none;
+  color: #333;
+}
+.containerContacto:hover {
+  transform: scale(1.2);
 }
 .contacto {
-  color: #333; /* Color del texto */
-  text-decoration: none; /* Quita el subrayado por defecto */
-  margin: 10px;
-  font-size: 1.2rem; /* Tamaño de la fuente */
-  transition: font-size 0.3s ease;
-  font-family: "MontserratTitle";
-}
-.contacto:hover {
-  font-size: 1.4rem;
-}
-.contacto .icono {
-  margin-right: 10px;
+  font-size: 22px;
+  margin-left: 10px;
+  text-decoration: none;
 }
 .logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 60%;
+  margin-left: 30px;
+  width: 100%;
+}
+.logoImg {
+  height: 100px;
+  width: 100px;
 }
 .titulo {
-  text-align: center; /* Añade esta línea */
   font-family: "MontserratTitle";
-  margin: 10px;
   color: #333;
   font-size: 24px;
+  margin-left: 30px;
 }
 .flecha {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
-  color: #333;
-  margin-right: 20px;
-  transition: all 0.3s;
+  transition: transform 0.3s ease;
+  margin: 20px;
 }
 .flecha:hover {
-  transform: scale(1.25);
+  transform: scale(1.2);
 }
 .logoMio {
-  margin-left: 150px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 50px;
+}
+.logoMioImg {
+  height: 130px;
+  width: 210px;
+}
+.iconContacto,
+.iconFlecha {
+  text-decoration: none;
+  color: #333;
+  font-size: 40px;
 }
 @font-face {
   font-family: "MontserratTitle";
   src: url(../../../assets/tipografias/MontserratTitle.ttf);
+}
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    justify-content: center; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+  }
+  .logoMio {
+    margin-right: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .contacto {
+    font-size: 18px;
+  }
+  .logoImg {
+    height: 80px;
+    width: 80px;
+  }
+  .titulo {
+    font-size: 18px;
+    margin-left: 20px;
+  }
+  .logoMioImg {
+    height: 100px;
+    width: 180px;
+    margin-right: 0px;
+  }
+  .iconContacto,
+  .iconFlecha {
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .logoImg {
+    height: 70px;
+    width: 70px;
+  }
+  .titulo {
+    font-size: 16px;
+  }
+  .logoMioImg {
+    height: 80px;
+    width: 160px;
+    margin-right: 0px;
+  }
 }

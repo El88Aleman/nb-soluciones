@@ -34,7 +34,7 @@
 
 .service-item {
   width: 600px;
-  min-height: 150px;
+  min-height: 300px;
   padding: 20px;
   margin: 20px;
   background-color: #f0f0f0;
@@ -60,4 +60,28 @@
 @font-face {
   font-family: "MontserratTitle";
   src: url(../../assets/tipografias/MontserratTitle);
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 30px;
+  }
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100vh); /* Salir de la pantalla */
+      opacity: 0; /* Comenzar invisible */
+    }
+    50% {
+      transform: translateX(20vh);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0); /* Posición final */
+      opacity: 1; /* Hacer visible */
+    }
+  }
+  .service-item {
+    width: 350px;
+    min-height: 150px;
+  }
 }

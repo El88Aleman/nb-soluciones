@@ -3,7 +3,6 @@ import { FaArrowUp } from "react-icons/fa";
 import { FaAddressBook } from "react-icons/fa";
 import { motion } from "framer-motion";
 import "./Footer.css";
-import LogoFyB from "../../../assets/fotos/LogoFyB";
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -11,17 +10,15 @@ const Footer = () => {
   return (
     <div className="footer">
       <div>
-        <Link to="/Contactos" className="contacto">
-          <FaAddressBook size={40} className="icono" />
-          Contactos
+        <Link to="/Contactos" className="containerContacto">
+          <FaAddressBook className="iconContacto" />
+          <p className="contacto">Contactos</p>
         </Link>
       </div>
       <div className="logo">
         <motion.img
           src="../../src/assets/fotos/nbSoluciones.png"
-          heigth="100px"
-          width="100px"
-          className="image"
+          className="logoImg"
           whileInView={{
             scale: [1, 1.5, 1, 1, 1.5, 1],
             rotate: [0, 0, 180, 180, 180, 0],
@@ -37,12 +34,15 @@ const Footer = () => {
         <p className="titulo">
           <strong>Soluciones</strong> en Ingenieria e Higiene y Seguridad{" "}
         </p>
-        <div className="logoMio">
-          <LogoFyB />
-        </div>
+      </div>
+      <div className="logoMio">
+        <img
+          src="https://res.cloudinary.com/dfcnmxndf/image/upload/v1725313619/igoxccnkwjgxloo0nqra.png"
+          className="logoMioImg"
+        />
       </div>
       <Link className="flecha" onClick={scrollToTop}>
-        <FaArrowUp size={35} />
+        <FaArrowUp className="iconFlecha" />
       </Link>
     </div>
   );

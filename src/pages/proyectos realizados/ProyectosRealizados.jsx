@@ -1,19 +1,13 @@
 import { Image } from "react-bootstrap";
 import "./ProyectosRealizados.css";
 import { proyectos } from "./proyectosRealizados.js";
-import UseIntersecting from "../../components/useIntersecting/UseIntersecting";
+
 import "./ProyectosRealizados.css";
 const ProyectosRealizados = () => {
-  const [elementoRef7, isIntersecting7] = UseIntersecting({
-    threshold: 0.5,
-  });
   return (
     <div className="proyectosRealizados">
-      <div
-        style={{ marginBottom: "100px", marginTop: "30px" }}
-        ref={elementoRef7}
-      >
-        {isIntersecting7 && <p className="title">Proyectos Realizados</p>}
+      <div style={{ marginBottom: "100px", marginTop: "30px" }}>
+        <p className="title">Proyectos Realizados</p>
       </div>
       {proyectos.map((proyecto) => (
         <div key={proyecto.id} className="containerProyect">

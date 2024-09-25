@@ -13,21 +13,50 @@
   margin-right: 30px;
 }
 .itemMenu {
-  color: #333; /* Color del texto */
-  text-decoration: none; /* Quita el subrayado por defecto */
-  padding: 10px 20px; /* Espaciado interno */
-  font-size: 1.2rem; /* Tamaño de la fuente */
+  color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
   transition: font-size 0.3s ease;
   font-family: "MontserratTitle";
 }
 .itemMenu:hover {
   font-size: 1.4rem;
 }
-.image {
+.logoNb {
+  height: 200px;
+  width: 200px;
   margin: 20px;
+}
+.logoNbMenu {
+  height: 70px;
+  width: 70px;
+  margin: 20px;
+}
+.navBarMobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navLink {
+  font-family: "MontserratTitle";
+  text-decoration: none; /* Elimina el subrayado predeterminado */
+  color: #333;
+  transition: font-size 0.3s ease; /* Agrega una transición suave al tamaño del texto */
+  margin-top: 10px;
+}
+.navLink:hover {
+  font-size: 1.2em; /* Tamaño del texto al pasar el mouse por encima */
 }
 
 @font-face {
   font-family: "MontserratTitle";
   src: url(../../../assets/tipografias/MontserratTitle.ttf);
+}
+
+@media (max-width: 480px) {
+  .logoNb {
+    height: 175px;
+    width: 175px;
+  }
 }
