@@ -4,14 +4,10 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import "./Contactos.css";
 import { useNavigate } from "react-router-dom";
-import UseIntersecting from "../../components/useIntersecting/UseIntersecting";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
 const Contactos = () => {
-  const [elementoRef6, isIntersecting6] = UseIntersecting({
-    threshold: 0.5,
-  });
   const [messageSent, setMessageSent] = useState(false);
   const navigate = useNavigate();
   const form = useRef();
@@ -78,8 +74,8 @@ const Contactos = () => {
               controlId="exampleForm.ControlTextarea1"
             >
               <Form.Label>
-                Exprese aquí lo que desea comunicarle a Nicolas Berevil para ser
-                contactado
+                Exprese aquí lo que desea comunicarle a Nicolas Beresvil para
+                ser contactado
               </Form.Label>
               <Form.Control
                 className="labelText"
@@ -97,35 +93,27 @@ const Contactos = () => {
               Enviar
             </Button>
           </Form>
-          <div className="iconos" ref={elementoRef6}>
-            {isIntersecting6 && (
-              <div className="iconos">
-                <a href="tel:+3425456890" target="_blank" className="icon">
-                  <FaPhoneAlt className="phone" size={60} />
-                </a>
-                <a
-                  href="https://wa.me/3425456890"
-                  target="_blank"
-                  className="icon"
-                >
-                  <FaWhatsapp className="whatsapp" size={60} />
-                </a>
-                <a
-                  href="https://www.instagram.com/ing.nicolasberesvil"
-                  target="_blank"
-                  className="icon"
-                >
-                  <FaInstagram className="ig" size={60} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/nicol%C3%A1s-beresvil-682a89b0/"
-                  target="_blank"
-                  className="icon"
-                >
-                  <FaLinkedin className="linkedin" size={60} />
-                </a>
-              </div>
-            )}
+          <div className="iconos">
+            <a href="tel:+3425456890" target="_blank" className="icon">
+              <FaPhoneAlt className="phone" size={60} />
+            </a>
+            <a href="https://wa.me/3425456890" target="_blank" className="icon">
+              <FaWhatsapp className="whatsapp" size={60} />
+            </a>
+            <a
+              href="https://www.instagram.com/ing.nicolasberesvil"
+              target="_blank"
+              className="icon"
+            >
+              <FaInstagram className="ig" size={60} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/nicol%C3%A1s-beresvil-682a89b0/"
+              target="_blank"
+              className="icon"
+            >
+              <FaLinkedin className="linkedin" size={60} />
+            </a>
           </div>
         </>
       )}

@@ -1,6 +1,5 @@
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import {
   Container,
   Nav,
@@ -47,20 +46,9 @@ const NavBar = () => {
           >
             <Link to="/">
               <Navbar.Brand href="#">
-                <motion.img
-                  src="../../src/assets/fotos/nbSoluciones.png"
+                <img
+                  src="https://res.cloudinary.com/dfcnmxndf/image/upload/v1728508017/Nb%20Soluciones/id3liuuryp1vbyeqm2tr.png"
                   className="logoNb"
-                  whileInView={{
-                    scale: [0.5, 1, 0.5, 0.5, 1, 1],
-                    rotate: [0, 0, 180, 180, 180, 0],
-                    borderRadius: ["50%", "0%", "50%", "0%", "50%"],
-                  }}
-                  transition={{
-                    duration: 2,
-                    ease: "easeInOut",
-                    times: [0, 0.2, 0.5, 0.8, 1],
-                    repeatDelay: 1,
-                  }}
                 />
               </Navbar.Brand>
             </Link>
@@ -84,20 +72,9 @@ const NavBar = () => {
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                   <Link to="/">
-                    <motion.img
-                      src="../../src/assets/fotos/nbSoluciones.png"
+                    <img
+                      src="https://res.cloudinary.com/dfcnmxndf/image/upload/v1728508017/Nb%20Soluciones/id3liuuryp1vbyeqm2tr.png"
                       className="logoNbMenu"
-                      whileInView={{
-                        scale: [0.5, 1, 0.5, 0.5, 1, 1],
-                        rotate: [0, 0, 180, 180, 180, 0],
-                        borderRadius: ["50%", "0%", "50%", "0%", "50%"],
-                      }}
-                      transition={{
-                        duration: 2,
-                        ease: "easeInOut",
-                        times: [0, 0.2, 0.5, 0.8, 1],
-                        repeatDelay: 1,
-                      }}
                     />
                   </Link>
                 </Offcanvas.Title>
@@ -113,8 +90,8 @@ const NavBar = () => {
                   <Link to="/ingenieria" className="navLink">
                     Servicios Ingenieria
                   </Link>
-                  <Link to="/proyectosRealizados" className="navLink">
-                    Proyectos Realizados
+                  <Link to="/confianEnNosotros" className="navLink">
+                    Confian en Nosotros
                   </Link>
                   <Link to="/contactos" className="navLink">
                     Contactos
@@ -127,20 +104,9 @@ const NavBar = () => {
       ) : (
         <>
           <Link to="/">
-            <motion.img
-              src="../../src/assets/fotos/nbSoluciones.png"
+            <img
+              src="https://res.cloudinary.com/dfcnmxndf/image/upload/v1728508017/Nb%20Soluciones/id3liuuryp1vbyeqm2tr.png"
               className="logoNb"
-              whileInView={{
-                scale: [0.5, 1, 0.5, 0.5, 1, 1],
-                rotate: [0, 0, 180, 180, 180, 0],
-                borderRadius: ["50%", "0%", "50%", "0%", "50%"],
-              }}
-              transition={{
-                duration: 2,
-                ease: "easeInOut",
-                times: [0, 0.2, 0.5, 0.8, 1],
-                repeatDelay: 1,
-              }}
             />
           </Link>
           <ul className="menu">
@@ -153,8 +119,8 @@ const NavBar = () => {
             <Link to="/ingenieria" className="itemMenu">
               Servicios Ingenieria
             </Link>
-            <Link to="/proyectosRealizados" className="itemMenu">
-              Proyectos Realizados
+            <Link to="/confianEnNosotros" className="itemMenu">
+              Confian en Nosotros
             </Link>
             <Link to="/contactos" className="itemMenu">
               Contactos

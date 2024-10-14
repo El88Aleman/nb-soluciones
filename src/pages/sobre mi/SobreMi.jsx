@@ -1,15 +1,12 @@
 import "./SobreMi.css";
+import "../../components/global/global.css";
 import Servicios from "./servicios/Servicios.jsx";
 import HistorialDeConfianza from "./historial de confianza/HistorialDeConfianza.jsx";
 import { Typewriter } from "react-simple-typewriter";
-import UseIntersecting from "../../components/useIntersecting/UseIntersecting.jsx";
 import { Col, Image } from "react-bootstrap";
-//import curriculum from "./cv/CVFrancoBertone.pdf";//
+import curriculum from "../../assets/cv/CV-NicolasBeresvil.pdf";
 
 const SobreMi = () => {
-  const [elementoRef, isIntersecting] = UseIntersecting({
-    threshold: 0.5,
-  });
   const handleClickCv = () => {
     window.open(curriculum, "_blank");
   };
@@ -24,9 +21,8 @@ const SobreMi = () => {
         className="image"
       >
         <Image
-          src="https://res.cloudinary.com/dfcnmxndf/image/upload/v1724883523/Nb%20Soluciones/jy7hvcld2bjtjn3139lq.png"
-          width="300px"
-          height="350px"
+          src="https://res.cloudinary.com/dfcnmxndf/image/upload/v1728425991/Nb%20Soluciones/c7uxdgclluieximurhkm.png"
+          className="imageNico"
           roundedCircle
         />
       </Col>
@@ -50,8 +46,8 @@ const SobreMi = () => {
           delaySpeed={3000}
         />
       </div>
-      <div className="contenedorTitle" ref={elementoRef}>
-        {isIntersecting && <p className="title">Objetivos</p>}
+      <div className="contenedorTitle">
+        <p className="title">Objetivos</p>
       </div>
       <div className="text">
         <Typewriter

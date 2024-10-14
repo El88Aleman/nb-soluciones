@@ -1,0 +1,42 @@
+.proyectosRealizados {
+  width: 100%;
+  height: auto;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.containerProyect {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.containerText {
+  margin: 10px;
+  color: white;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "MontserratText";
+  font-size: 24px;
+}
+.buttonProyect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+@media (max-width: 480px) {
+  .containerText {
+    font-size: 18px;
+  }
+  .imgProyect {
+    padding: 30px;
+  }
+}

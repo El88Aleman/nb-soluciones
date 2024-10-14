@@ -6,26 +6,17 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.loader {
   position: relative;
-  overflow: hidden; /* Para ocultar el logo cuando se desplace */
-  width: 340px; /* Ajusta al tamaño de tu logo */
-  height: 220px; /* Ajusta al tamaño de tu logo */
 }
-
 .loaderImg {
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: auto;
+  width: 340px;
+  height: 220px;
   opacity: 0; /* Comienza invisible */
   transform: translateX(100%); /* Comienza desplazado */
   animation: load 2s forwards; /* Duración de la animación */
 }
-
 @keyframes load {
   0% {
     opacity: 0;
@@ -37,5 +28,12 @@
   100% {
     opacity: 1;
     transform: translateX(0); /* Regresa a su posición original */
+  }
+}
+
+@media (max-width: 480px) {
+  .loaderImg {
+    width: 280px;
+    height: 160px;
   }
 }

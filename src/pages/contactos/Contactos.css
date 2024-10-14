@@ -30,8 +30,9 @@
   font-family: "MontserratText";
   color: white !important;
   text-align: center;
-  width: 20%;
+  min-width: 30% !important; /* Ancho mínimo */
   margin: 20px;
+  font-size: 20px !important;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 .button:hover {
@@ -45,7 +46,6 @@
   justify-content: space-around;
   align-items: center;
   list-style-type: none;
-  margin: 20px;
   width: 100%;
   animation: slideIn 1s ease forwards;
 }
@@ -129,4 +129,9 @@
 @font-face {
   font-family: "MontserratText";
   src: url(../../assets/tipografias/MontserratText.ttf);
+}
+@media (max-width: 480px) {
+  .mensajeAprobado {
+    font-size: 24px;
+  }
 }

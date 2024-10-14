@@ -83,4 +83,18 @@ export const historiales = [
     height: "300px",
     width: "300px",
   },
+  {
+    id: 13,
+    position: 13,
+    src: "https://res.cloudinary.com/dfcnmxndf/image/upload/v1728671868/Nb%20Soluciones/v5vhp2q8al976wjuw90x.png",
+    height: "300px",
+    width: "300px",
+  },
+  {
+    id: 14,
+    position: 14,
+    src: "https://res.cloudinary.com/dfcnmxndf/image/upload/v1728671868/Nb%20Soluciones/xklfx410szrnvpwignny.png",
+    height: "300px",
+    width: "300px",
+  },
 ];
